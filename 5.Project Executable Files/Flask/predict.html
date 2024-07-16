@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body
+        {
+        background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_920777500_410710.jpg");
+        background-size: cover;
+        }
+        h3.big
+        {
+        line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">Employee Promotion Prediction Using ML</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="D:\VS CODE\flask project\templates\predict.html">Predict</a></li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h4>
+        <form action="/predict" method="post" >
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="department" >Department</label>
+                    <input type="text" class="form-control" name="department" id="department"  required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="education">Education</label>
+            </div>
+              <select class="custom-select" id="education" name="education">
+                <option value="1">Below Secondary</option>
+                <option value="2">Bachelor's</option>
+                  <option value="3">Master's & above</option>
+              </select>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="no_of_trainings">No of trainings</label>
+                    <input type="text" class="form-control" name="no_of_trainings" id="no_of_trainings"  required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="age">Age</label>
+                    <input type="text" class="form-control" name="age" id="age" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="previous_year_rating">Previous year rating</label>
+                    <input type="text" class="form-control" name="previous_year_rating" id="previous_year_rating" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="length_of_service">Length of service</label>
+                    <input type="text" class="form-control" name="length_of_service" id="length_of_service"  required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="KPIs">KPIs_met >80%</label>
+            </div>
+              <select class="custom-select" id="KPIs" name="KPIs">
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="awards_won">Awards won</label>
+            </div>
+              <select class="custom-select" id="awards_won" name="awards_won">
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="avg_training_score">Average training score</label>
+                    <input type="text" class="form-control" name="avg_training_score" id="avg_training_score"  required="required"/>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+        </form>
+        <br>
+        </h4>
+      
+    </div>
+   
+    <center>
+       
+/<p style="color:black"> <h1><b>{{data}} </b></h1> </p>
+</center>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Promotion Prediction Using ML</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-color: black;
+            
+        }
+        .home-1{
+            text-align: center;
+            a{
+                color: rgb(230, 226, 226);
+                &:hover{
+                     color: aqua;
+                }
+            }   
+        }
+        .image{
+
+            width: 100%;
+            height: auto;
+            background-position: center center;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="home-1">
+    <h1><a href={{ url_for('predict')}}>Predict</h1>
+    <h1><a href={{ url_for('about') }}>About Us</h1></div>
+        <div class="image">
+    <img src="https://c7.alamy.com/comp/TB0R07/employee-in-career-promotion-concept-TB0R07.jpg" alt="Employee Promotion Prediction Using ML">
+         </div>
+</body>
+</html>
